@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Pricing</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="header-container">
+        <h1>Our Pricing</h1>
+        <div class="toggle-container">
+          <span class="toggle-label">Annually</span>
+          <div class="toggle"><div class="toggle-handle"></div></div>
+          <span class="toggle-label">Monthly</span>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <article>
+            <span>Basic</span>
+            <h2 id="basic-price-display"></h2>
+            <ul>
+              <li><span class="details" id="basic-storage-display"></span></li>
+              <li><span class="details" id="basic-users-display"></span></li>
+              <li>
+                <span class="details" id="basic-sendLimit-display"></span>
+              </li>
+            </ul>
+            <button class="learn-more-btn">LEARN MORE</button>
+          </article>
+        </div>
+        <div class="card center">
+          <article>
+            <span>Professional</span>
+            <h2 id="professional-price-display"></h2>
+            <ul>
+              <li>
+                <span class="details" id="professional-storage-display"></span>
+              </li>
+              <li>
+                <span class="details" id="professional-users-display"></span>
+              </li>
+              <li>
+                <span
+                  class="details"
+                  id="professional-sendLimit-display"
+                ></span>
+              </li>
+            </ul>
+            <button class="learn-more-btn inverted">LEARN MORE</button>
+          </article>
+        </div>
+        <div class="card">
+          <article>
+            <span>Master</span>
+            <h2 id="master-price-display"></h2>
+            <ul>
+              <li><span class="details" id="master-storage-display"></span></li>
+              <li><span class="details" id="master-users-display"></span></li>
+              <li>
+                <span class="details" id="master-sendLimit-display"></span>
+              </li>
+            </ul>
+            <button class="learn-more-btn">LEARN MORE</button>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/dbidmead" target="_blank">Drew Bidmead</a>.
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

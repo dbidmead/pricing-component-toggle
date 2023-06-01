@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --gradient: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --purple: hsl(237, 63%, 64%);
+  --pale: hsl(240, 78%, 98%);
+  --light: hsl(234, 14%, 74%);
+  --medium: hsl(233, 13%, 49%);
+  --dark: hsl(232, 13%, 33%);
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-size: 15px;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pale);
+}
+
+.site-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.044);
+  min-width: 350px;
+}
+
+.card > article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card > article > ul {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--light);
+}
+
+li {
+  padding: 1rem;
+  border-top: 1px solid var(--light);
+}
+
+.card.center {
+  background: var(--gradient);
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  color: var(--pale) !important;
+}
+
+.center > * > h2,
+.center > * > span,
+.center > * > * > * > span {
+  color: var(--pale);
+}
+
+h1,
+span {
+  color: var(--medium);
+}
+
+.toggle-label {
+  color: var(--light);
+}
+
+h2 {
+  font-size: 3.5rem;
+  color: var(--dark);
+}
+
+.learn-more-btn {
+  background: var(--gradient);
+  border: none;
+  color: var(--pale);
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.learn-more-btn:hover {
+  background: none;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+}
+
+.learn-more-btn.inverted {
+  background: none;
+  background-color: white;
+  color: var(--purple);
+}
+
+.learn-more-btn.inverted:hover {
+  color: var(--pale);
+  border-color: var(--pale);
+  background: none;
+}
+
+.toggle {
+  background-color: grey;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+}
+.toggle:hover {
+  background: var(--gradient);
+}
+.toggle-handle {
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+}
+.toggled {
+  justify-content: flex-end;
+  background: var(--gradient);
+}
+.slide-right {
+  animation-name: slide-right;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+.slide-left {
+  animation-name: slide-left;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+@keyframes slide-right {
+  0% {
+    left: 0.2rem;
+  }
+  50% {
+    left: 50%;
+  }
+  60% {
+    left: 55%;
+  }
+  100% {
+    right: 0.2rem;
+  }
+}
+@keyframes slide-left {
+  0% {
+    right: 0.2rem;
+  }
+  20% {
+    right: 30%;
+  }
+  50% {
+    right: 50%;
+  }
+  100% {
+    left: 0.2rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    gap: 2rem;
+  }
+
+  .header-container {
+    padding-top: 4rem;
+  }
+  .cards-container {
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+    min-width: 300px;
+    width: 85%;
+  }
+
+  .card.center {
+    padding: 2rem;
+  }
+}
